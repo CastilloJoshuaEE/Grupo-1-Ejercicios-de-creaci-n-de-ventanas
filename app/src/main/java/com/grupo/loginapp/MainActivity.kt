@@ -9,7 +9,7 @@ import com.google.android.material.textfield.TextInputLayout
 
 class MainActivity : AppCompatActivity() {
 
-    
+
     private lateinit var contenedorNombreUsuario: TextInputLayout
     private lateinit var contenedorContrasena: TextInputLayout
     private lateinit var campoNombreUsuario: TextInputEditText

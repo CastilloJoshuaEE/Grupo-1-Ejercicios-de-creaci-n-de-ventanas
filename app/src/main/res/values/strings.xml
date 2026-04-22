@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Nombre de la aplicación -->
+    <string name="app_name">Sistema de Login</string>
+
+    <!-- ===== Cabecera del grupo ===== -->
+    <string name="nombre_institucion">Universidad Técnica de Machala</string>
+    <string name="nombre_carrera">Ingeniería en Sistemas / Desarrollo Móvil</string>
+    <string name="datos_grupo">Grupo: A1  |  Período: 2025 – I</string>
+    <string name="nombre_docente">Docente: Ing. Nombre Apellido</string>
+
+    <!-- ===== Propuesta de proyecto ===== -->
+    <string name="titulo_proyecto">Sistema de Gestión Académica</string>
+    <string name="subtitulo_login">Inicia sesión para continuar</string>
+
+    <!-- ===== Formulario de login ===== -->
+    <string name="etiqueta_usuario">Nombre de Usuario</string>
+    <string name="etiqueta_contrasena">Contraseña</string>
+    <string name="hint_usuario">Ingrese su usuario</string>
+    <string name="hint_contrasena">Ingrese su contraseña</string>
+    <string name="texto_boton_login">Iniciar Sesión</string>
+
+    <!-- ===== Mensajes Toast ===== -->
+    <string name="mensaje_acceso_concedido">✅ Acceso Concedido</string>
+    <string name="mensaje_datos_incorrectos">❌ Datos incorrectos</string>
+
+    <!-- ===== Mensajes de error ===== -->
+    <string name="error_campo_vacio">Este campo es requerido</string>
+
+    <!-- ===== Pie de página ===== -->
+    <string name="pie_pagina">© 2025 – Desarrollo de Aplicaciones Móviles</string>
+
+    <!-- ===== Descripción de imagen (accesibilidad) ===== -->
+    <string name="descripcion_imagen_login">Ícono de inicio de sesión seguro</string>
+</resources>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Ícono de escudo de seguridad para la pantalla de inicio de sesión.
+    Representa seguridad y protección de datos del usuario.
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="100dp"
+    android:height="100dp"
+    android:viewportWidth="100"
+    android:viewportHeight="100">
+
+    <!-- Círculo de fondo azul -->
+    <path
+        android:fillColor="#1A237E"
+        android:pathData="M50,50 m-50,0 a50,50 0 1,0 100,0 a50,50 0 1,0 -100,0" />
+
+    <!-- Escudo exterior -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M50,18 L72,28 L72,52 Q72,67 50,78 Q28,67 28,52 L28,28 Z" />
+
+    <!-- Escudo interior (relleno azul) -->
+    <path
+        android:fillColor="#1565C0"
+        android:pathData="M50,24 L67,32 L67,52 Q67,64 50,73 Q33,64 33,52 L33,32 Z" />
+
+    <!-- Candado cuerpo -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M43,50 L43,62 L57,62 L57,50 Q57,44 50,44 Q43,44 43,50 Z" />
+
+    <!-- Candado arco superior -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:fillAlpha="0"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="3"
+        android:pathData="M44,50 L44,45 Q44,39 50,39 Q56,39 56,45 L56,50" />
+
+    <!-- Punto de cerradura -->
+    <path
+        android:fillColor="#1565C0"
+        android:pathData="M50,53 m-3,0 a3,3 0 1,0 6,0 a3,3 0 1,0 -6,0" />
+
+    <!-- Línea cerradura -->
+    <path
+        android:fillColor="#1565C0"
+        android:pathData="M49,56 L49,60 L51,60 L51,56 Z" />
+
+</vector>

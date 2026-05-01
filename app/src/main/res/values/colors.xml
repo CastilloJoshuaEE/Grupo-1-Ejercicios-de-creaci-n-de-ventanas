@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+<<<<<<< HEAD
     <!-- ===== Colores Principales ===== -->
     <color name="colorPrimario">#1A237E</color>         <!-- Azul oscuro institucional -->
     <color name="colorPrimarioVariante">#283593</color>  <!-- Azul medio -->
@@ -23,6 +24,27 @@
     <color name="colorError">#C62828</color>             <!-- Rojo error -->
 
     <!-- ===== Compatibilidad Material ===== -->
+=======
+    <!-- Colores principales -->
+    <color name="colorPrimario">#1A3A8F</color>
+    <color name="colorPrimarioVariante">#0D1B5E</color>
+    <color name="colorAcento">#1A6DC0</color>
+
+    <!-- Fondos y cabecera -->
+    <color name="colorCabecera">#0D1B5E</color>
+    <color name="colorFondoInicio">#0D1B5E</color>
+
+    <!-- Blancos -->
+    <color name="blanco">#FFFFFF</color>
+    <color name="blancoSemiTransparente">#CCFFFFFF</color>
+
+    <!-- Grises y negro -->
+    <color name="grisTexto">#757575</color>
+    <color name="grisOscuro">#424242</color>
+    <color name="negroTexto">#212121</color>
+
+    <!-- Material design compat -->
+>>>>>>> dev
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
     <color name="purple_700">#FF3700B3</color>

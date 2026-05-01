@@ -1,4 +1,5 @@
 # Add project specific ProGuard rules here.
+<<<<<<< HEAD
 # You can control the set of applied configuration files using the
 # proguardFiles setting in build.gradle.
 #
@@ -18,3 +19,8 @@
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
+=======
+# By default, the flags in this file are appended to flags specified
+# in /path/to/sdk/tools/proguard/proguard-android.txt
+-keepattributes *Annotation*
+>>>>>>> dev

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="altura_minima_pantalla">700dp</dimen>
+    <dimen name="margen_horizontal">24dp</dimen>
+    <dimen name="margen_vertical">16dp</dimen>
+    <dimen name="radio_esquinas">12dp</dimen>
+    <dimen name="tamano_texto_titulo">22sp</dimen>
+    <dimen name="tamano_texto_normal">15sp</dimen>
+    <dimen name="tamano_texto_pequeno">12sp</dimen>
+</resources>

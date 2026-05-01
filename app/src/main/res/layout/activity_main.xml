@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@drawable/fondo_degradado">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/altura_minima_pantalla"
+        android:paddingBottom="32dp">
+
+        <!-- ===== CABECERA DEL GRUPO ===== -->
+        <LinearLayout
+            android:id="@+id/layoutCabecera"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/colorCabecera"
+            android:orientation="vertical"
+            android:paddingTop="40dp"
+            android:paddingBottom="16dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/txtNombreInstitucion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/nombre_institucion"
+                android:textColor="@color/blanco"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtNombreCarrera"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/nombre_carrera"
+                android:textColor="@color/blancoSemiTransparente"
+                android:textSize="11sp"
+                android:gravity="center"
+                android:layout_marginTop="2dp"/>
+
+            <TextView
+                android:id="@+id/txtDatosGrupo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/datos_grupo"
+                android:textColor="@color/blancoSemiTransparente"
+                android:textSize="11sp"
+                android:gravity="center"
+                android:layout_marginTop="2dp"/>
+
+            <TextView
+                android:id="@+id/txtNombreDocente"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/nombre_docente"
+                android:textColor="@color/blancoSemiTransparente"
+                android:textSize="11sp"
+                android:gravity="center"
+                android:layout_marginTop="2dp"/>
+
+        </LinearLayout>
+
+        <!-- ===== TARJETA PRINCIPAL DE LOGIN ===== -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/tarjetaLogin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginTop="28dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="12dp"
+            app:cardBackgroundColor="@color/blanco"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layoutCabecera">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingStart="28dp"
+                android:paddingEnd="28dp"
+                android:paddingTop="32dp"
+                android:paddingBottom="32dp">
+
+                <!-- Imagen ícono de login -->
+                <ImageView
+                    android:id="@+id/imagenLogin"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_login_escudo"
+                    android:contentDescription="@string/descripcion_imagen_login" />
+
+                <!-- Título del proyecto -->
+                <TextView
+                    android:id="@+id/txtTituloProyecto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/titulo_proyecto"
+                    android:textColor="@color/colorPrimario"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:layout_marginTop="12dp" />
+
+                <TextView
+                    android:id="@+id/txtSubtituloLogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/subtitulo_login"
+                    android:textColor="@color/grisTexto"
+                    android:textSize="13sp"
+                    android:gravity="center"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="24dp" />
+
+                <!-- Separador -->
+                <View
+                    android:layout_width="40dp"
+                    android:layout_height="3dp"
+                    android:layout_gravity="center"
+                    android:background="@color/colorAcento"
+                    android:layout_marginBottom="24dp" />
+
+                <!-- Campo: Nombre de Usuario -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/etiqueta_usuario"
+                    android:textColor="@color/grisOscuro"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="6dp" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/contenedorNombreUsuario"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    app:boxStrokeColor="@color/colorPrimario"
+                    app:hintTextColor="@color/colorPrimario"
+                    app:startIconDrawable="@drawable/ic_persona"
+                    app:startIconTint="@color/colorPrimario">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/campoNombreUsuario"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/hint_usuario"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:textColor="@color/negroTexto"
+                        android:textSize="15sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Campo: Contraseña -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/etiqueta_contrasena"
+                    android:textColor="@color/grisOscuro"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="6dp" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/contenedorContrasena"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="28dp"
+                    app:boxStrokeColor="@color/colorPrimario"
+                    app:hintTextColor="@color/colorPrimario"
+                    app:startIconDrawable="@drawable/ic_candado"
+                    app:startIconTint="@color/colorPrimario"
+                    app:endIconMode="password_toggle">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/campoContrasena"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/hint_contrasena"
+                        android:inputType="textPassword"
+                        android:maxLines="1"
+                        android:textColor="@color/negroTexto"
+                        android:textSize="15sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Botón Iniciar Sesión -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/botonIniciarSesion"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:text="@string/texto_boton_login"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/blanco"
+                    app:backgroundTint="@color/colorPrimario"
+                    app:cornerRadius="12dp"
+                    app:icon="@drawable/ic_iniciar_sesion"
+                    app:iconGravity="textStart"
+                    app:iconTint="@color/blanco" />
+
+                <!-- Botón Crear Cuenta -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/botonCrearCuenta"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_marginTop="12dp"
+                    android:text="Crear cuenta"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorPrimario"
+                    app:strokeColor="@color/colorPrimario"
+                    app:cornerRadius="12dp" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Texto pie de página -->
+        <TextView
+            android:id="@+id/txtPiePagina"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pie_pagina"
+            android:textColor="@color/blancoSemiTransparente"
+            android:textSize="11sp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintTop_toBottomOf="@id/tarjetaLogin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

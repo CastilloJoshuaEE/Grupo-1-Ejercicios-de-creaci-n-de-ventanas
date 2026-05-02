@@ -113,34 +113,88 @@ public class RegistroActivity extends AppCompatActivity {
         String nacionalidad = spinnerNacionalidad.getSelectedItem().toString();
         String genero      = spinnerGenero.getSelectedItem().toString();
 
-        // Estado civil
-        int radioId = radioGroupEstadoCivil.getCheckedRadioButtonId();
-        String estadoCivil = "";
-        if (radioId != -1) {
-            RadioButton radioSeleccionado = findViewById(radioId);
-            estadoCivil = radioSeleccionado.getText().toString();
+        String regexLetras = "[a-zA-ZáéíóúñÑ ]+";
+
+        // Validacion Cedula
+        if (cedula.isEmpty()) {
+            campoCedula.setError("La cédula es obligatoria");
+            campoCedula.requestFocus();
+            return;
+        } else if (!cedula.matches("\\d+")) { // Solo dígitos
+            campoCedula.setError("La cédula debe contener solo números");
+            campoCedula.requestFocus();
+            return;
+        } else if (cedula.length() != 10) { // Validación de longitud
+            campoCedula.setError("La cédula debe tener exactamente 10 dígitos");
+            campoCedula.requestFocus();
+            return;
         }
 
-        String fecha       = txtFechaNacimiento.getText().toString();
+        // Validacion Nombres: no vacio y solo letras
+        if (nombres.isEmpty()) {
+            campoNombres.setError("Ingrese sus nombres");
+            campoNombres.requestFocus();
+            return;
+        } else if (!nombres.matches(regexLetras)) {
+            campoNombres.setError("Los nombres solo deben contener letras");
+            campoNombres.requestFocus();
+            return;
+        }
+        // Validacion Apellidos: no vacio y solo letras
+        if (apellidos.isEmpty()) {
+            campoApellidos.setError("Ingrese sus apellidos");
+            campoApellidos.requestFocus();
+            return;
+        } else if (!apellidos.matches(regexLetras)) {
+            campoApellidos.setError("Los apellidos solo deben contener letras");
+            campoApellidos.requestFocus();
+            return;
+        }
+        // Validacion Edad: no vacio
+        if (edad.isEmpty()) {
+            campoEdad.setError("Ingrese la edad");
+            campoEdad.requestFocus();
+            return;
+        }
+        int edadInt = Integer.parseInt(edad);
+        if (edadInt < 1 || edadInt > 120) {
+            campoEdad.setError("La edad debe estar entre 1 y 120 años");
+            campoEdad.requestFocus();
+            return;
+        }
+
+        // Validacion Spinners (Nacionalidad y Género)
+        if (spinnerNacionalidad.getSelectedItemPosition() == 0) {
+            Toast.makeText(this, "Debe seleccionar una nacionalidad", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        if (spinnerGenero.getSelectedItemPosition() == 0) {
+            Toast.makeText(this, "Debe seleccionar un género", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        // Validación Fecha de Nacimiento
+        String fecha = txtFechaNacimiento.getText().toString();
+        if (fecha.isEmpty() || fecha.equals("Toque para seleccionar fecha")) {
+            Toast.makeText(this, "Debe seleccionar su fecha de nacimiento", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        // Validacion Estado Civil
+        int radioId = radioGroupEstadoCivil.getCheckedRadioButtonId();
+
+        if (radioId == -1) {
+            Toast.makeText(this, "Debe seleccionar un estado civil", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        RadioButton radioSeleccionado = findViewById(radioId);
+        String estadoCivil = radioSeleccionado.getText().toString();
+
+        //
+
         float nivelIngles  = ratingBarIngles.getRating();
 
-        // Validación básica
-        if (cedula.isEmpty() || nombres.isEmpty() || apellidos.isEmpty() || edad.isEmpty()) {
-            Toast.makeText(this, "Por favor complete todos los campos obligatorios", Toast.LENGTH_SHORT).show();
-            return;
-        }
-        if (nacionalidad.equals("Seleccione...") || genero.equals("Seleccione...")) {
-            Toast.makeText(this, "Seleccione Nacionalidad y Género", Toast.LENGTH_SHORT).show();
-            return;
-        }
-        if (radioId == -1) {
-            Toast.makeText(this, "Seleccione el Estado Civil", Toast.LENGTH_SHORT).show();
-            return;
-        }
-        if (fecha.isEmpty() || fecha.equals("Toque para seleccionar fecha")) {
-            Toast.makeText(this, "Seleccione la Fecha de Nacimiento", Toast.LENGTH_SHORT).show();
-            return;
-        }
+
 
         // Registrar en el LOG del sistema
         Log.i(TAG, " DATOS REGISTRADOS");

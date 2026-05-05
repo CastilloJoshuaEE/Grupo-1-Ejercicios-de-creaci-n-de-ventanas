@@ -437,7 +437,13 @@
                         android:textColor="@color/grisOscuro"
                         app:strokeColor="@color/grisOscuro"
                         app:cornerRadius="10dp" />
-
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/botonVerRegistros"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Ver Registros"
+                        android:layout_marginTop="16dp"
+                        style="@style/Widget.Material3.Button.OutlinedButton" />
                 </LinearLayout>
 
             </LinearLayout>

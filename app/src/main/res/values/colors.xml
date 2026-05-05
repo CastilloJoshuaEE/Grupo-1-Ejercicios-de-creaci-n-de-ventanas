@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-<<<<<<< HEAD
+
     <!-- ===== Colores Principales ===== -->
-    <color name="colorPrimario">#1A237E</color>         <!-- Azul oscuro institucional -->
-    <color name="colorPrimarioVariante">#283593</color>  <!-- Azul medio -->
-    <color name="colorAcento">#FF6F00</color>            <!-- Naranja acento -->
-    <color name="colorSecundario">#1565C0</color>        <!-- Azul medio para gradiente -->
+    <color name="colorPrimario">#1A237E</color>
+    <color name="colorPrimarioVariante">#283593</color>
+    <color name="colorAcento">#FF6F00</color>
+    <color name="colorSecundario">#1565C0</color>
 
     <!-- ===== Fondo ===== -->
-    <color name="colorFondoInicio">#0D1B5E</color>       <!-- Azul muy oscuro (inicio degradado) -->
-    <color name="colorFondoFin">#1A6DC0</color>          <!-- Azul medio (fin degradado) -->
-    <color name="colorCabecera">#0D1B5ECC</color>        <!-- Azul muy oscuro semitransparente -->
+    <color name="colorFondoInicio">#0D1B5E</color>
+    <color name="colorFondoFin">#1A6DC0</color>
+    <color name="colorCabecera">#0D1B5ECC</color>
 
     <!-- ===== Texto ===== -->
     <color name="blanco">#FFFFFF</color>
@@ -20,31 +20,10 @@
     <color name="grisOscuro">#424242</color>
 
     <!-- ===== Estado ===== -->
-    <color name="colorExito">#2E7D32</color>             <!-- Verde éxito -->
-    <color name="colorError">#C62828</color>             <!-- Rojo error -->
+    <color name="colorExito">#2E7D32</color>
+    <color name="colorError">#C62828</color>
 
     <!-- ===== Compatibilidad Material ===== -->
-=======
-    <!-- Colores principales -->
-    <color name="colorPrimario">#1A3A8F</color>
-    <color name="colorPrimarioVariante">#0D1B5E</color>
-    <color name="colorAcento">#1A6DC0</color>
-
-    <!-- Fondos y cabecera -->
-    <color name="colorCabecera">#0D1B5E</color>
-    <color name="colorFondoInicio">#0D1B5E</color>
-
-    <!-- Blancos -->
-    <color name="blanco">#FFFFFF</color>
-    <color name="blancoSemiTransparente">#CCFFFFFF</color>
-
-    <!-- Grises y negro -->
-    <color name="grisTexto">#757575</color>
-    <color name="grisOscuro">#424242</color>
-    <color name="negroTexto">#212121</color>
-
-    <!-- Material design compat -->
->>>>>>> dev
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
     <color name="purple_700">#FF3700B3</color>
@@ -52,4 +31,5 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
 </resources>

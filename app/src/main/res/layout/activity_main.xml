@@ -184,10 +184,10 @@
                     android:layout_marginBottom="28dp"
                     app:boxStrokeColor="@color/colorPrimario"
                     app:hintTextColor="@color/colorPrimario"
-<<<<<<< HEAD
+
                     app:passwordToggleEnabled="true"
-=======
->>>>>>> dev
+
+
                     app:startIconDrawable="@drawable/ic_candado"
                     app:startIconTint="@color/colorPrimario"
                     app:endIconMode="password_toggle">
@@ -219,8 +219,8 @@
                     app:iconGravity="textStart"
                     app:iconTint="@color/blanco" />
 
-<<<<<<< HEAD
-=======
+
+
                 <!-- Botón Crear Cuenta -->
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/botonCrearCuenta"
@@ -235,7 +235,20 @@
                     app:strokeColor="@color/colorPrimario"
                     app:cornerRadius="12dp" />
 
->>>>>>> dev
+                //
+                <Button
+                    android:id="@+id/btn_Cerrar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Cerrar"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginEnd="24dp"
+                    app:layout_constraintTop_toBottomOf="@id/txtPiePagina"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 

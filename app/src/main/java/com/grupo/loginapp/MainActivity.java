@@ -1,7 +1,10 @@
 package com.grupo.loginapp;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -34,6 +37,31 @@ public class MainActivity extends AppCompatActivity {
         botonCrearCuenta.setOnClickListener(v -> {
             Intent intent = new Intent(MainActivity.this, RegistroActivity.class);
             startActivity(intent);
+        });
+
+        //
+
+        Button btn_Cerrar = findViewById(R.id.btn_Cerrar);
+
+
+        btn_Cerrar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                SharedPreferences preferences = getSharedPreferences("MisPreferencias", MODE_PRIVATE);
+
+                // Limpiamos los datos
+                SharedPreferences.Editor editor = preferences.edit();
+                editor.clear();
+                editor.apply();
+
+
+                Intent intent = new Intent(MainActivity.this, MainActivity.class);
+                startActivity(intent);
+
+
+                finish();
+            }
         });
     }
 

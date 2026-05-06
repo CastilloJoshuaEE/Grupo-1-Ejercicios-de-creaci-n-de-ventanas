@@ -19,14 +19,12 @@
             </intent-filter>
         </activity>
 
-<<<<<<< HEAD
-=======
+
         <activity
             android:name=".RegistroActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
 
->>>>>>> dev
     </application>
 
 </manifest>

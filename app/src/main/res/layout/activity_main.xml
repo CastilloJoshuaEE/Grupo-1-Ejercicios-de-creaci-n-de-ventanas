@@ -184,10 +184,6 @@
                     android:layout_marginBottom="28dp"
                     app:boxStrokeColor="@color/colorPrimario"
                     app:hintTextColor="@color/colorPrimario"
-<<<<<<< HEAD
-                    app:passwordToggleEnabled="true"
-=======
->>>>>>> dev
                     app:startIconDrawable="@drawable/ic_candado"
                     app:startIconTint="@color/colorPrimario"
                     app:endIconMode="password_toggle">
@@ -203,6 +199,13 @@
                         android:textSize="15sp" />
 
                 </com.google.android.material.textfield.TextInputLayout>
+                <CheckBox
+                    android:id="@+id/checkRecordar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mantener sesión iniciada"
+                    android:textColor="@color/grisOscuro"
+                    android:layout_marginBottom="16dp"/>
 
                 <!-- Botón Iniciar Sesión -->
                 <com.google.android.material.button.MaterialButton
@@ -219,8 +222,7 @@
                     app:iconGravity="textStart"
                     app:iconTint="@color/blanco" />
 
-<<<<<<< HEAD
-=======
+
                 <!-- Botón Crear Cuenta -->
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/botonCrearCuenta"
@@ -235,7 +237,7 @@
                     app:strokeColor="@color/colorPrimario"
                     app:cornerRadius="12dp" />
 
->>>>>>> dev
+
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 

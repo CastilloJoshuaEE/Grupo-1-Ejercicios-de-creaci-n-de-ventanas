@@ -1,9 +1,12 @@
 package com.grupo.loginapp;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -44,6 +47,33 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(MainActivity.this, RegistroActivity.class);
             startActivity(intent);
         });
+
+        //
+        // --- CÓDIGO PARA BORRAR DATOS ---
+        Button btnCerrar = findViewById(R.id.btn_cerrar);
+
+        btnCerrar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+                SharedPreferences preferences = getSharedPreferences("MisPreferencias", MODE_PRIVATE);
+
+                //  Borrar los datos
+                SharedPreferences.Editor editor = preferences.edit();
+                editor.clear(); // Elimina todas las claves guardadas
+                editor.apply(); // Guarda los cambios
+
+                //  Redirigir al usuario al Login
+
+                Intent intent = new Intent(MainActivity.this, MainActivity.class);
+                startActivity(intent);
+
+                // 4. Cerrar esta pantalla para que el usuario no pueda volver atrás con el botón físico
+                finish();
+            }
+        });
+
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

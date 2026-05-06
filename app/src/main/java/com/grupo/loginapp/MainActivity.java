@@ -1,17 +1,10 @@
 package com.grupo.loginapp;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textfield.TextInputEditText;
@@ -30,12 +23,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        // Configurar Toolbar como ActionBar
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        if (getSupportActionBar() != null) {
-            getSupportActionBar().setTitle("Login App");
-        }
+
         campoUsuario   = findViewById(R.id.campoNombreUsuario);
         campoContrasena = findViewById(R.id.campoContrasena);
         botonLogin      = findViewById(R.id.botonIniciarSesion);
@@ -47,53 +35,8 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(MainActivity.this, RegistroActivity.class);
             startActivity(intent);
         });
-
-        //
-        // --- CÓDIGO PARA BORRAR DATOS ---
-        Button btnCerrar = findViewById(R.id.btn_cerrar);
-
-        btnCerrar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-
-                SharedPreferences preferences = getSharedPreferences("MisPreferencias", MODE_PRIVATE);
-
-                //  Borrar los datos
-                SharedPreferences.Editor editor = preferences.edit();
-                editor.clear(); // Elimina todas las claves guardadas
-                editor.apply(); // Guarda los cambios
-
-                //  Redirigir al usuario al Login
-
-                Intent intent = new Intent(MainActivity.this, MainActivity.class);
-                startActivity(intent);
-
-                // 4. Cerrar esta pantalla para que el usuario no pueda volver atrás con el botón físico
-                finish();
-            }
-        });
-
     }
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflar el menú
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        int id = item.getItemId();
 
-        if (id == R.id.action_acerca_de) {
-            // Mostrar el modal Acerca de
-            AcercaDeDialog dialog = AcercaDeDialog.newInstance();
-            dialog.show(getSupportFragmentManager(), "AcercaDeDialog");
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
     private void validarLogin() {
         String user = campoUsuario.getText() != null
                 ? campoUsuario.getText().toString().trim() : "";
